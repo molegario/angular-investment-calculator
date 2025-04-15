@@ -1,0 +1,28 @@
+<section>
+  @if(totalAnnualInvestmentsData.length > 0) {
+      <table>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Investment Value</th>
+            <th>Interest (year)</th>
+            <th>Total Interest</th>
+            <th>Invested Capital</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of totalAnnualInvestmentsData; track $index) {
+            <tr>
+              <td>{{ item.year }}</td>
+              <td>{{item.valueEndOfYear | currency}}</td>
+              <td>{{item.interest | percent}}</td>
+              <td>{{item.totalInterest | currency}}</td>
+              <td>{{item.totalAmountInvested | currency}}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    } @else {
+      <caption>No data available</caption>
+    }
+</section>

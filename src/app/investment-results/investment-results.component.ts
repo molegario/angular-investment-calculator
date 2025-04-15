@@ -13,7 +13,6 @@ import { CommonModule } from "@angular/common";
   ],
 })
 export class InvestmentResultsComponent {
-
   constructor(private investmentResultsService: InvestmentResultsService) {}
 
   get totalAnnualInvestmentsData() {

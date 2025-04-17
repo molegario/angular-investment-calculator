@@ -11,13 +11,6 @@ export class InvestmentResultsService {
   annualInvestment: number = 0;
   expectedReturn: number = 0;
 
-  // constructor(duration: number, initialInvestment: number, annualInvestment: number, expectedReturn: number) {
-  //   this.duration = duration;
-  //   this.initialInvestment = initialInvestment;
-  //   this.annualInvestment = annualInvestment;
-  //   this.expectedReturn = expectedReturn;
-  // }
-
   setDuration(duration: number) {
     this.duration = duration;
   }
@@ -35,7 +28,6 @@ export class InvestmentResultsService {
   }
 
   calculateInvestmentResults(): AnnualInvestmentResult[] {
-
     if (this.duration <= 0 || this.initialInvestment < 0 || this.annualInvestment < 0 || this.expectedReturn < 0) {
       return [];
     }
@@ -58,8 +50,6 @@ export class InvestmentResultsService {
         totalAmountInvested: this.initialInvestment + this.annualInvestment * year,
       });
     }
-
-    console.log('totalAnnualInvestmentData::', this.totalAnnualInvestmentData);
 
     return this.totalAnnualInvestmentData;
   }

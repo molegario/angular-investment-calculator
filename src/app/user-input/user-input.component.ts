@@ -18,13 +18,6 @@ export class UserInputComponent {
   constructor(private investmentResultsService: InvestmentResultsService) {}
 
   calculate() {
-    console.log(
-      'calculate() called',
-      typeof this.initialInvestment,
-      typeof this.annualInvestment,
-      typeof this.expectedReturn,
-      typeof this.duration
-    );
     this.investmentResultsService.setInitialInvestment(this.initialInvestment);
     this.investmentResultsService.setAnnualInvestment(this.annualInvestment);
     this.investmentResultsService.setExpectedReturn(this.expectedReturn);

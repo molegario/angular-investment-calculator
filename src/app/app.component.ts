@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
-import { InvestmentResultsComponent } from './investment-results/investment-results.component';
 import { UserInputComponent } from './user-input/user-input.component';
+import { InvestmentResultsModule } from './investment-results/investment-results.module';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { UserInputComponent } from './user-input/user-input.component';
   templateUrl: './app.component.html',
   imports: [
     HeaderComponent,
-    InvestmentResultsComponent,
+    InvestmentResultsModule,
     UserInputComponent,
   ],
 })

@@ -18,6 +18,7 @@ export class UserInputComponent {
   constructor(private investmentResultsService: InvestmentResultsService) {}
 
   calculate() {
+    //ngSubmit prevents form submission and page reload
     this.investmentResultsService.setInitialInvestment(this.initialInvestment);
     this.investmentResultsService.setAnnualInvestment(this.annualInvestment);
     this.investmentResultsService.setExpectedReturn(this.expectedReturn);

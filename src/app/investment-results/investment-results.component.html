@@ -11,14 +11,20 @@
         </tr>
       </thead>
       <tbody>
-        @for(item of totalAnnualInvestmentsData; track $index) {
+        @for(item of totalAnnualInvestmentsData; track item.year) {
           <tr app-result-row [resultItem]="item"></tr>
         }
       </tbody>
     </table>
   } @else {
-    <caption>
-      No data available
-    </caption>
+    @if(ran_once) {
+      <caption>
+        No data for current investment parameters. <br/> Please update your investment parameters and try again.
+      </caption>
+    } @else {
+      <caption>
+        Please enter valid investment paramteres above.
+      </caption>
+    }
   }
 </section>

@@ -23,5 +23,12 @@ export class UserInputComponent {
     this.investmentResultsService.setAnnualInvestment(this.annualInvestment);
     this.investmentResultsService.setExpectedReturn(this.expectedReturn);
     this.investmentResultsService.setDuration(this.duration);
+    this.investmentResultsService.setRanOnce();
+
+    // Reset the form values after submission
+    this.initialInvestment = 0;
+    this.annualInvestment = 0;
+    this.expectedReturn = 0;
+    this.duration = 0;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { AnnualInvestmentResult } from "./investment-results.model";
+import type { AnnualInvestmentResult } from "./investment-results.model";
 
 @Component({
   selector: "tr[app-result-row]",

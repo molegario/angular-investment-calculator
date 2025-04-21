@@ -10,6 +10,11 @@ import { InvestmentResultsService } from "./investment-results.service";
 export class InvestmentResultsComponent {
   constructor(private investmentResultsService: InvestmentResultsService) {}
 
+  get ran_once() {
+    return this.investmentResultsService.ran_once; // needs to be computed since the service value is initalized to false
+                                                   // and we need to trigger change detection
+  }
+
   get totalAnnualInvestmentsData() {
     return this.investmentResultsService.calculateInvestmentResults();
   }

@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { AnnualInvestmentResult } from "./investment-results.model";
+import type { AnnualInvestmentResult } from "./investment-results.model";
 
 
 @Injectable({providedIn: 'root'})
@@ -10,6 +10,11 @@ export class InvestmentResultsService {
   initialInvestment: number = 0;
   annualInvestment: number = 0;
   expectedReturn: number = 0;
+  ran_once: boolean = false;
+
+  setRanOnce() {
+    this.ran_once = true;
+  }
 
   setDuration(duration: number) {
     this.duration = duration;
